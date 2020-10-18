@@ -28,15 +28,7 @@ struct MediaControlView: View {
       
       Spacer(minLength: 10)
       
-      Button(action: {
-        if publisher.isPaused {
-          publisher.playerAPI?.resume(.none)
-        } else {
-          publisher.playerAPI?.pause(.none)
-        }
-      }) {
-        Image(systemName: publisher.isPaused ? "play.fill" : "pause.fill")
-      }
+      PlayPauseView()
       
       Spacer(minLength: 10)
       

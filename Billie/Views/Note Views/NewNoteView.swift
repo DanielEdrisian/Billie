@@ -48,6 +48,7 @@ struct NewNoteView: View {
         
         TextArea("Note Body", text: $currentDescription)
           .font(.headline)
+          .frame(minHeight: 100)
       }
       .padding(.horizontal)
     }

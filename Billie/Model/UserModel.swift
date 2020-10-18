@@ -71,5 +71,9 @@ class UserModel: ObservableObject {
       songs.append(newSong)
     }
   }
+  
+  func notesFor(songId: String) -> [NoteModel] {
+    songs.first(where: { $0.id == songId })?.notes ?? []
+  }
 }
 
