@@ -68,6 +68,7 @@ struct SongDetailNavBar: View {
             
             Button(action: {
               if publisher.accessToken == ""  {
+                #warning("replace with uri")
                 publisher.connect(with: song.id)
                 return
               }

@@ -20,7 +20,7 @@ struct NowPlayingView: View {
   var body: some View {
     ScrollView {
       VStack {
-        if let profileImage = publisher.profileImage {
+        if let profileImage = publisher.albumImage {
           Image(uiImage: profileImage)
             .resizable()
             .aspectRatio(contentMode: .fill)

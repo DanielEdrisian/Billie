@@ -69,6 +69,7 @@ class UserModel: ObservableObject {
     } else {
       let newSong = SongModel(id: note.songId, name: song.name, artist: song.artist, duration: song.duration, notes: [note])
       songs.append(newSong)
+      setSongs()
     }
   }
   
