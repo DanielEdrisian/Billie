@@ -27,9 +27,12 @@ class UserModel: ObservableObject {
         
         songs = songsData.map({ (songData) -> SongModel in
             let notesData = songData["notes"] as! [[String: Any]]
-            let notes = notesData.map { NoteModel(title: $0["title"] as! String,
+            let notes = notesData.map { NoteModel(songId: $0["songId"] as? String,
+                                                  title: $0["title"] as! String,
                                                   description: $0["description"] as! String,
-                                                  timeInSong: $0["timeInSong"] as! Int) }
+                                                  timeInSong: $0["timeInSong"] as! Int,
+                                                  createdAt: Date(timeIntervalSince1970: TimeInterval($0["createdAt"] as! Int)))
+            }
             let song = SongModel(id: songData["id"] as! String,
                                  name: songData["name"] as! String,
                                  artist: songData["artist"] as! String,
@@ -42,8 +45,6 @@ class UserModel: ObservableObject {
     func readFromRemote(completion: @escaping ((Error?) -> ())) {
         ref.child(UIDevice.current.identifierForVendor!.uuidString).observe(.value) { (snap) in
             guard let _ = snap.value else { completion(NSError()); fatalError() }
-            
-            UserModel.shared.fillSongs(withSnapshot: snap)
             
             completion(nil)
         }
