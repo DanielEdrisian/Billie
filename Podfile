@@ -6,6 +6,14 @@ target 'Billie' do
   use_frameworks!
 
   # Pods for Billie
+pod 'Firebase/Analytics'
+
+# Add the pods for any other Firebase products you want to use in your app
+# For example, to use Firebase Authentication and Cloud Firestore
+pod 'Firebase/Auth'
+pod 'Firebase/Database'
+pod 'Firebase/Firestore'
+
 
   target 'BillieTests' do
     inherit! :search_paths
