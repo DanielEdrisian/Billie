@@ -23,6 +23,7 @@ struct SongDetailView: View {
             
             ScrollView {
                 VStack(spacing: 12) {
+                  NewNoteView()
                     ForEach(song.notes, id: \.id) { note in
                       NoteItemView(note: note) { time in
                         publisher.playSong(uri: "")

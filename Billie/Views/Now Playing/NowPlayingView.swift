@@ -10,7 +10,8 @@ import Sliders
 
 struct NowPlayingView: View {
     
-    @ObservedObject var publisher: SpotifyPublisher
+  @ObservedObject var publisher = SpotifyPublisher.shared
+  @ObservedObject var user = UserModel.shared
     
     var body: some View {
       ScrollView {

@@ -46,6 +46,8 @@
 		3A0D2BCF253C68C7000A8AF5 /* Pods_Billie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C8B2A27A0AFC15E1242F59D /* Pods_Billie.framework */; };
 		8E02397515BD70091EB3DF07 /* Pods_Billie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C8B2A27A0AFC15E1242F59D /* Pods_Billie.framework */; };
 		BD8B024C253C75850054AF76 /* NoteItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD8B024B253C75850054AF76 /* NoteItemView.swift */; };
+		BD8B0256253C791E0054AF76 /* NewNoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD8B0255253C791E0054AF76 /* NewNoteView.swift */; };
+		BD8B025C253C80890054AF76 /* TextArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD8B025B253C80890054AF76 /* TextArea.swift */; };
 		E8930187E15B9353ACAAEB49 /* Pods_Billie_BillieUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38AAA8AB1C573CCE177A1EFA /* Pods_Billie_BillieUITests.framework */; };
 		EAC7E3A3253C5B230066985A /* NowPlayingSliverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC7E3A2253C5B230066985A /* NowPlayingSliverView.swift */; };
 		EDE56DF864BCC54B5C2B53B7 /* Pods_BillieTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BF08051362EDE22C5996D88 /* Pods_BillieTests.framework */; };
@@ -141,6 +143,8 @@
 		B181BC3C742876DB443F342D /* Pods-BillieTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BillieTests.release.xcconfig"; path = "Target Support Files/Pods-BillieTests/Pods-BillieTests.release.xcconfig"; sourceTree = "<group>"; };
 		B730C291FCC6441BBCC8558E /* Pods-BillieTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BillieTests.debug.xcconfig"; path = "Target Support Files/Pods-BillieTests/Pods-BillieTests.debug.xcconfig"; sourceTree = "<group>"; };
 		BD8B024B253C75850054AF76 /* NoteItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteItemView.swift; sourceTree = "<group>"; };
+		BD8B0255253C791E0054AF76 /* NewNoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewNoteView.swift; sourceTree = "<group>"; };
+		BD8B025B253C80890054AF76 /* TextArea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextArea.swift; sourceTree = "<group>"; };
 		EAC7E3A2253C5B230066985A /* NowPlayingSliverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowPlayingSliverView.swift; sourceTree = "<group>"; };
 		EEC38AF50852D6399DA47CBB /* Pods-Billie.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Billie.debug.xcconfig"; path = "Target Support Files/Pods-Billie/Pods-Billie.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -276,7 +280,7 @@
 				3A0D2B0A253C3DB0000A8AF5 /* SongDetailView.swift */,
 				3A0D2B12253C3DB1000A8AF5 /* IsPlayingView.swift */,
 				3A0D2B1C253C3DB2000A8AF5 /* SearchView.swift */,
-				BD8B024B253C75850054AF76 /* NoteItemView.swift */,
+				BD8B026D253C84FC0054AF76 /* Note Views */,
 				3A0D2B52253C3E71000A8AF5 /* Now Playing */,
 			);
 			path = Views;
@@ -346,6 +350,16 @@
 				B181BC3C742876DB443F342D /* Pods-BillieTests.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		BD8B026D253C84FC0054AF76 /* Note Views */ = {
+			isa = PBXGroup;
+			children = (
+				BD8B024B253C75850054AF76 /* NoteItemView.swift */,
+				BD8B0255253C791E0054AF76 /* NewNoteView.swift */,
+				BD8B025B253C80890054AF76 /* TextArea.swift */,
+			);
+			path = "Note Views";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -629,8 +643,10 @@
 				3A0D2BB2253C60B3000A8AF5 /* widget.intentdefinition in Sources */,
 				3A0D2B1E253C3DB3000A8AF5 /* SongDetailView.swift in Sources */,
 				3A0D2B2C253C3DB3000A8AF5 /* Extensions.swift in Sources */,
+				BD8B0256253C791E0054AF76 /* NewNoteView.swift in Sources */,
 				3A0D2B29253C3DB3000A8AF5 /* CustomSlider.swift in Sources */,
 				3A0D2B28253C3DB3000A8AF5 /* SpotifyKit.swift in Sources */,
+				BD8B025C253C80890054AF76 /* TextArea.swift in Sources */,
 				BD8B024C253C75850054AF76 /* NoteItemView.swift in Sources */,
 				3A0D2B22253C3DB3000A8AF5 /* UserModel.swift in Sources */,
 				3A0D2B2B253C3DB3000A8AF5 /* HomeView.swift in Sources */,

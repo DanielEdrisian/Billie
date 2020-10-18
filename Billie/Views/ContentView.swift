@@ -43,7 +43,7 @@ struct ContentView: View {
         }
         .accentColor(.sRed)
         .sheet(isPresented: $show) {
-          NowPlayingView(publisher: publisher)
+          NowPlayingView()
 //              .frame(maxWidth: .infinity, maxHeight: .infinity)
               .background(BlurView(style: .systemThickMaterial))
 //              .tRoundCorners(40, corners: [.topLeft, .topRight])
