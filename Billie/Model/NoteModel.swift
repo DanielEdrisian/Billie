@@ -8,7 +8,8 @@
 import Foundation
 
 struct NoteModel: Identifiable {
-    let id = UUID()
+  var songId: String?
+  let id = UUID().uuidString
     
     var title: String
     var description: String
@@ -16,6 +17,15 @@ struct NoteModel: Identifiable {
     var timeInSong: Int /// time in song in seconds
     
     var createdAt: Date = Date()
+  
+  func toDict() -> [String: Any] {
+    ["songId": self.songId ?? "",
+     "id": self.id,
+     "title": self.title,
+     "description": self.description,
+     "timeInSong": self.timeInSong,
+     "createdAt": Int(self.createdAt.timeIntervalSince1970)]
+  }
 }
 
 extension NoteModel {

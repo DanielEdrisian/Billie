@@ -9,6 +9,8 @@ import UIKit
 import SwiftUI
 import Firebase
 
+let ref = FirebaseDatabase.Database.database().reference()
+
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     var window: UIWindow?
@@ -42,11 +44,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
       FirebaseApp.configure()
       FirebaseAuth.Auth.auth().signInAnonymously { (res, error) in
         if error == nil {
-          FirebaseDatabase.Database.database().reference().child(UIDevice.current.identifierForVendor!.uuidString).observe(.value) { (snap) in
-            guard let val = snap.value else { fatalError() }
-            
-            print(val)
-            
+          UserModel.shared.readFromRemote { (error) in
             // Create the SwiftUI view that provides the window contents.
             let contentView = ContentView()
             
