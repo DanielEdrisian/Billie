@@ -65,9 +65,7 @@ struct SpotifyTestView: View {
                 
                 Button(action: {
                     if publisher.isPaused {
-                        publisher.appRemote.playerAPI?.resume { (whatever, error) in print(error ?? "") }
-                    } else {
-                        publisher.appRemote.playerAPI?.pause { (whatever, error) in print(error ?? "") }
+                        publisher.playSong(uri: "")
                     }
                 }) {
                     Image(systemName: publisher.isPaused ? "play.fill" : "pause.fill")
@@ -94,8 +92,10 @@ struct SpotifyTestView: View {
         .padding(.horizontal)
     }
     
-    func durationFrom(_ seconds: UInt) -> String {
-        let min = seconds / UInt(60)
+    
+    func durationFrom(_ ms: UInt) -> String {
+        let seconds = ms / 1000
+        let min = seconds / 60
         let sec = seconds % 60
         
         return "\(min):" + String(format: "%.2d", sec)

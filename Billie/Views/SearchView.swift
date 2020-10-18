@@ -20,8 +20,8 @@ struct SearchView: View {
             List {
                 Section(header: Text("Search")) {
                     TextField("Search Spotify", text: $queryString, onEditingChanged: { b in
-                    }, onCommit: {
                         publisher.search(forString: queryString)
+                    }, onCommit: {
                     })
                 }
                 
