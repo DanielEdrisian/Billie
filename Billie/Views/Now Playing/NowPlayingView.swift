@@ -12,7 +12,7 @@ struct NowPlayingView: View {
     
   @ObservedObject var publisher = SpotifyPublisher.shared
   @ObservedObject var user = UserModel.shared
-    
+  
     var body: some View {
       ScrollView {
         VStack {
@@ -46,51 +46,12 @@ struct NowPlayingView: View {
               
   //            Spacer()
               
-              HStack {
-                  Button(action: {
-                      publisher.playerAPI?.skip(toPrevious: .none)
-                  }) {
-                      Image(systemName: "backward.fill")
-                  }
-                  
-                  Spacer(minLength: 10)
-                  
-                  Button(action: {
-                      publisher.playerAPI?.seek(toPosition: publisher.playbackPosition - 15000, callback: nil)
-                  }) {
-                      Image(systemName: "gobackward.15")
-                  }
-                  
-                  Spacer(minLength: 10)
-                  
-                  Button(action: {
-                      if publisher.isPaused {
-                        publisher.playerAPI?.resume(.none)
-                      } else {
-                        publisher.playerAPI?.pause(.none)
-                      }
-                  }) {
-                      Image(systemName: publisher.isPaused ? "play.fill" : "pause.fill")
-                  }
-                  
-                  Spacer(minLength: 10)
-                  
-                  Button(action: {
-                      publisher.playerAPI?.seek(toPosition: publisher.playbackPosition + 15000, callback: nil)
-                  }) {
-                      Image(systemName: "goforward.15")
-                  }
-                  
-                  Spacer(minLength: 10)
-                  
-                  Button(action: {
-                      publisher.playerAPI?.skip(toNext: .none)
-                  }) {
-                      Image(systemName: "forward.fill")
-                  }
-              }
-              .font(.system(size: 35))
+              MediaControlView()
+          
+          NewNoteView(songId: publisher.track?.uri, currentPositionMillisecs: publisher.playbackPosition) { note in
+            user.addNote(note: note, song: .init(track: publisher.track!))
           }
+        }
         .padding(.horizontal)
       }
     }

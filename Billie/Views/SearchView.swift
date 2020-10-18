@@ -16,13 +16,17 @@ struct SearchView: View {
     @State private var queryString = ""
     
     var body: some View {
+      let binding = Binding(
+                  get: { self.queryString },
+                  set: {
+                    self.queryString = $0
+                    publisher.search(forString: queryString)
+                  }
+              )
         VStack {
             List {
                 Section(header: Text("Search")) {
-                    TextField("Search Spotify", text: $queryString, onEditingChanged: { b in
-                        publisher.search(forString: queryString)
-                    }, onCommit: {
-                    })
+                    TextField("Search Spotify", text: binding)
                 }
                 
                 Section(header: Text("Results")) {

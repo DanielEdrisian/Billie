@@ -28,8 +28,8 @@ struct NoteModel: Identifiable {
     }
 }
 
-//extension NoteModel {
-//    static func example() -> NoteModel {
-//        NoteModel(title: "OMG Epic Sax", description: "Epic Sax Solo AHHHHHHHHHH Epic Sax Solo AHHHHHHHHHH Epic Sax Solo AHHHHHHHHHH Epic Sax Solo AHHHHHHHHHH Epic Sax Solo AHHHHHHHHHH Epic Sax Solo AHHHHHHHHHH Epic Sax Solo", timeInSong: 37)
-//    }
-//}
+extension NoteModel {
+    static func example() -> NoteModel {
+      NoteModel(songId: "", title: "OMG Epic Sax", description: "Epic Sax Solo AHHHHHHHHHH Epic Sax Solo AHHHHHHHHHH Epic Sax Solo AHHHHHHHHHH Epic Sax Solo AHHHHHHHHHH Epic Sax Solo AHHHHHHHHHH Epic Sax Solo AHHHHHHHHHH Epic Sax Solo", timeInSong: 37)
+    }
+}
