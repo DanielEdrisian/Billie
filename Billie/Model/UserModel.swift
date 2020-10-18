@@ -27,7 +27,7 @@ class UserModel: ObservableObject {
         
         songs = songsData.map({ (songData) -> SongModel in
             let notesData = songData["notes"] as! [[String: Any]]
-            let notes = notesData.map { NoteModel(songId: $0["songId"] as? String,
+            let notes = notesData.map { NoteModel(songId: $0["songId"] as! String,
                                                   title: $0["title"] as! String,
                                                   description: $0["description"] as! String,
                                                   timeInSong: $0["timeInSong"] as! Int,
@@ -62,4 +62,14 @@ class UserModel: ObservableObject {
         
         ref.child(UIDevice.current.identifierForVendor!.uuidString).child("songs").setValue(NSArray(array: songsDic))
     }
+  
+  func addNote(note: NoteModel, song: SongModel) {
+    if let matchingSong = songs.first(where: { $0.id == note.songId }) {
+      matchingSong.notes.append(note)
+    } else {
+      let newSong = SongModel(id: note.songId, name: song.name, artist: song.artist, duration: song.duration, notes: [note])
+      songs.append(newSong)
+    }
+  }
 }
+

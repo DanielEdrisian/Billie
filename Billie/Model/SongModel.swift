@@ -25,6 +25,10 @@ class SongModel: ObservableObject, Identifiable {
         self.duration = duration
         self.notes = notes
     }
+  
+  convenience init(track: SPTAppRemoteTrack) {
+    self.init(id: track.uri, name: track.name, artist: track.artist.name, duration: Int(track.duration), notes: [NoteModel]())
+  }
     
     func toDict() -> [String: Any] {
         ["id": self.id,
@@ -42,8 +46,8 @@ class SongModel: ObservableObject, Identifiable {
     }
 }
 
-extension SongModel {
-    static func example() -> SongModel {
-        SongModel(id: "1", name: "A Day In The Life", artist: "The Beatles", duration: 300, notes: .init(repeating: .example(), count: 5))
-    }
-}
+//extension SongModel {
+//    static func example() -> SongModel {
+//        SongModel(id: "1", name: "A Day In The Life", artist: "The Beatles", duration: 300, notes: .init(repeating: .example(), count: 5))
+//    }
+//}
