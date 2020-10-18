@@ -16,30 +16,30 @@ class SongModel: ObservableObject, Identifiable {
     
     var duration: Int /// song duration in number of seconds?
     
-  @Published var notes = [NoteModel]()
-  
-  init(id: String, name: String, artist: String, duration: Int, notes: [NoteModel]) {
-    self.id = id
-    self.name = name
-    self.artist = artist
-    self.duration = duration
-    self.notes = notes
-  }
-  
-  func toDict() -> [String: Any] {
-    ["id": self.id,
-     "name": self.name,
-     "artist": self.artist,
-     "duration": self.duration,
-     "notes": self.notes.map { $0.toDict() }]
-  }
-  
-  func addNote(note: NoteModel) {
-    var n = note
-    n.songId = self.id
-    notes.append(n)
-    UserModel.shared.setSongs()
-  }
+    @Published var notes = [NoteModel]()
+    
+    init(id: String, name: String, artist: String, duration: Int, notes: [NoteModel]) {
+        self.id = id
+        self.name = name
+        self.artist = artist
+        self.duration = duration
+        self.notes = notes
+    }
+    
+    func toDict() -> [String: Any] {
+        ["id": self.id,
+         "name": self.name,
+         "artist": self.artist,
+         "duration": self.duration,
+         "notes": self.notes.map { $0.toDict() }]
+    }
+    
+    func addNote(note: NoteModel) {
+        var n = note
+        n.songId = self.id
+        notes.append(n)
+        UserModel.shared.setSongs()
+    }
 }
 
 extension SongModel {
