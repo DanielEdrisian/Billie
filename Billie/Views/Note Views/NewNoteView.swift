@@ -40,7 +40,7 @@ struct NewNoteView: View {
           
           Spacer()
           
-          Text("\((currentPositionMillisecs ?? 0 / 1000).intToTime)")
+          Text("\(((currentPositionMillisecs ?? 0) / 1000).intToTime)")
             .fontWeight(.light)
         }
         
@@ -48,6 +48,7 @@ struct NewNoteView: View {
         
         TextArea("Note Body", text: $currentDescription)
           .font(.headline)
+          .frame(minHeight: 100)
       }
       .padding(.horizontal)
     }
