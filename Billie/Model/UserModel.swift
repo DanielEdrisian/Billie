@@ -45,6 +45,8 @@ class UserModel: ObservableObject {
     func readFromRemote(completion: @escaping ((Error?) -> ())) {
         ref.child(UIDevice.current.identifierForVendor!.uuidString).observe(.value) { (snap) in
             guard let _ = snap.value else { completion(NSError()); fatalError() }
+          
+          self.fillSongs(withSnapshot: snap)
             
             completion(nil)
         }

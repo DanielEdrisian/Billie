@@ -9,7 +9,7 @@ import SwiftUI
 
 struct HomeView: View {
   
-  @State private var songs = [SongModel](repeating: SongModel.example(), count: 4)
+  @ObservedObject var user = UserModel.shared
   
   var body: some View {
     NavigationView {
@@ -19,7 +19,7 @@ struct HomeView: View {
             .font(.title2)
             .bold()
           
-          ForEach(songs, id: \.id) { song in
+          ForEach(user.songs, id: \.id) { song in
             NavigationLink(destination: SongDetailView(publisher: SpotifyPublisher.shared, song: song)) {
               SongItemView(song: song)
             }
