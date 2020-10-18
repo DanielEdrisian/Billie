@@ -28,7 +28,7 @@ class SpotifyPublisher: NSObject, ObservableObject, SPTAppRemoteDelegate, SPTApp
     @Published var isPaused: Bool = true
     @Published var profileImage: UIImage?
     @Published var searchResults = [SpotifyTrack]()
-  @Published var albumImage: UIImage?
+    @Published var albumImage: UIImage?
   
     func search(forString: String) {
         if forString.isEmpty {
@@ -141,4 +141,14 @@ class SpotifyPublisher: NSObject, ObservableObject, SPTAppRemoteDelegate, SPTApp
             }
         }
     }
+  
+  func imageForUri(uri: String) -> UIImage {
+    var image = UIImage(systemName: "photo")!
+    guard let t = track else { return image }
+    manager.getTrack(title: t.name, artist: t.artist.name) { (spotitrack) in
+      let data = try? Data(contentsOf: URL(string: spotitrack.album?.artUri ?? "")!)
+      image =  UIImage(data: data!)!
+    }
+    return image
+  }
 }

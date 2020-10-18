@@ -16,17 +16,15 @@ struct HomeView: View {
     NavigationView {
       ScrollView(.vertical) {
         VStack(alignment: .leading, spacing: 8) {
-          Text("Recents")
-            .font(.title2)
-            .bold()
-          
-          ForEach(user.songs, id: \.id) { song in
-            NavigationLink(destination: SongDetailView(show: $show, publisher: SpotifyPublisher.shared, song: song)) {
-              SongItemView(song: song)
+          if !user.songs.isEmpty {
+            ForEach(user.songs, id: \.id) { song in
+              NavigationLink(destination: SongDetailView(show: $show, publisher: SpotifyPublisher.shared, song: song)) {
+                SongItemView(song: song)
+              }
             }
           } else {
             Text("No Notes")
-              .font(.title2)
+              .font(.title3)
               .fontWeight(.semibold)
             Text("You haven't created any song notes yet. Go play songs and make some!")
           }
@@ -35,19 +33,20 @@ struct HomeView: View {
         }
         .padding()
       }
-      .navigationBarTitle("Home")
+      .navigationBarTitle("Your Notes")
     }
   }
 }
 
 struct SongItemView: View {
   let song: SongModel
+  @ObservedObject var publisher = SpotifyPublisher.shared
   
   var body: some View {
     HStack {
-      Rectangle()
-        .fill(Color.black)
-        .frame(width: 45, height: 45)
+      Image(systemName: "music.note")
+        .foregroundColor(Color.accentColor)
+        .font(.title)
       
       VStack(alignment: .leading) {
         Text(song.name)

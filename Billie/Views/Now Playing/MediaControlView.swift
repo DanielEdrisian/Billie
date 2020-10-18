@@ -29,6 +29,8 @@ struct MediaControlView: View {
       Spacer(minLength: 10)
       
       PlayPauseView()
+        .font(.system(size: 45))
+
       
       Spacer(minLength: 10)
       
@@ -46,6 +48,6 @@ struct MediaControlView: View {
         Image(systemName: "forward.fill")
       }
     }
-    .font(.system(size: 35))
+    .font(.system(size: 25))
   }
 }

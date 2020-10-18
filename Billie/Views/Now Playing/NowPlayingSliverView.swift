@@ -19,9 +19,15 @@ struct NowPlayingSliverView: View {
             .scaledToFit()
             .frame(width: 50, height: 50)
           
-            Text(SpotifyPublisher.shared.track?.name ?? "")
-                .font(.subheadline)
-                .padding(.leading)
+          VStack(alignment: .leading) {
+              Text(SpotifyPublisher.shared.track?.name ?? "")
+                .fontWeight(.semibold)
+                  .padding(.leading)
+            
+            Text(publisher.track?.artist.name ?? "")
+              .font(.callout)
+              .foregroundColor(.secondary)
+          }
             
             Spacer()
             
