@@ -26,6 +26,12 @@ struct ContentView: View {
                     Text("Home")
                 }
                 
+                SearchView(publisher: SpotifyPublisher.shared)
+                    .tabItem {
+                        Image(systemName: "magnifyingglass")
+                        Text("Search")
+                    }
+                
                 Text("Settings")
                     .tabItem {
                         Image(systemName: "gear")
@@ -46,7 +52,6 @@ struct ContentView: View {
                     }
                 }
                 .padding(.top, 40)
-            
         }
         .onAppear {
             SpotifyPublisher.shared.connect()
