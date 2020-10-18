@@ -38,6 +38,7 @@
 		3A0D2B94253C50D5000A8AF5 /* NoteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0D2B93253C50D5000A8AF5 /* NoteModel.swift */; };
 		8E02397515BD70091EB3DF07 /* Pods_Billie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C8B2A27A0AFC15E1242F59D /* Pods_Billie.framework */; };
 		E8930187E15B9353ACAAEB49 /* Pods_Billie_BillieUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38AAA8AB1C573CCE177A1EFA /* Pods_Billie_BillieUITests.framework */; };
+		EAC7E3A3253C5B230066985A /* NowPlayingSliverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC7E3A2253C5B230066985A /* NowPlayingSliverView.swift */; };
 		EDE56DF864BCC54B5C2B53B7 /* Pods_BillieTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BF08051362EDE22C5996D88 /* Pods_BillieTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -102,6 +103,7 @@
 		A0C9C966036D73F3BD1AC7BA /* Pods-Billie-BillieUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Billie-BillieUITests.release.xcconfig"; path = "Target Support Files/Pods-Billie-BillieUITests/Pods-Billie-BillieUITests.release.xcconfig"; sourceTree = "<group>"; };
 		B181BC3C742876DB443F342D /* Pods-BillieTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BillieTests.release.xcconfig"; path = "Target Support Files/Pods-BillieTests/Pods-BillieTests.release.xcconfig"; sourceTree = "<group>"; };
 		B730C291FCC6441BBCC8558E /* Pods-BillieTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BillieTests.debug.xcconfig"; path = "Target Support Files/Pods-BillieTests/Pods-BillieTests.debug.xcconfig"; sourceTree = "<group>"; };
+		EAC7E3A2253C5B230066985A /* NowPlayingSliverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowPlayingSliverView.swift; sourceTree = "<group>"; };
 		EEC38AF50852D6399DA47CBB /* Pods-Billie.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Billie.debug.xcconfig"; path = "Target Support Files/Pods-Billie/Pods-Billie.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -244,6 +246,7 @@
 				3A0D2B1D253C3DB3000A8AF5 /* ProgressView.swift */,
 				3A0D2B13253C3DB1000A8AF5 /* SpotifyTestView.swift */,
 				3A0D2B15253C3DB1000A8AF5 /* CustomSlider.swift */,
+				EAC7E3A2253C5B230066985A /* NowPlayingSliverView.swift */,
 			);
 			path = "Now Playing";
 			sourceTree = "<group>";
@@ -546,6 +549,7 @@
 				3A0D2B27253C3DB3000A8AF5 /* SpotifyTestView.swift in Sources */,
 				3A0D2B20253C3DB3000A8AF5 /* SpotifyItems.swift in Sources */,
 				3A0D2B31253C3DB3000A8AF5 /* ProgressView.swift in Sources */,
+				EAC7E3A3253C5B230066985A /* NowPlayingSliverView.swift in Sources */,
 				3A0D2B94253C50D5000A8AF5 /* NoteModel.swift in Sources */,
 				3A0D2B2A253C3DB3000A8AF5 /* URLImage.swift in Sources */,
 			);
