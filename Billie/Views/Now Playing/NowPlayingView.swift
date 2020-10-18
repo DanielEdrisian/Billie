@@ -69,6 +69,7 @@ struct NowPlayingView: View {
           }
         }
         .padding(.horizontal)
+        .padding(.bottom)
       }
       .padding(.horizontal)
       .onAppear {

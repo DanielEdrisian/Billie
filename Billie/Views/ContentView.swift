@@ -46,6 +46,7 @@ struct ContentView: View {
           NowPlayingView()
 //              .frame(maxWidth: .infinity, maxHeight: .infinity)
               .background(BlurView(style: .systemThickMaterial))
+              .accentColor(.sRed)
 //              .tRoundCorners(40, corners: [.topLeft, .topRight])
 //              .offset(y: show ? 0 : UIScreen.main.bounds.height)
 //              .edgesIgnoringSafeArea(.bottom)

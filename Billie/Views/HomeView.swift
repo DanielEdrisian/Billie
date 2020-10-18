@@ -24,7 +24,11 @@ struct HomeView: View {
             NavigationLink(destination: SongDetailView(show: $show, publisher: SpotifyPublisher.shared, song: song)) {
               SongItemView(song: song)
             }
-            .buttonStyle(PlainButtonStyle())
+          } else {
+            Text("No Notes")
+              .font(.title2)
+              .fontWeight(.semibold)
+            Text("You haven't created any song notes yet. Go play songs and make some!")
           }
           
           Spacer()

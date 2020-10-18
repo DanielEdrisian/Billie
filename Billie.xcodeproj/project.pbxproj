@@ -46,7 +46,6 @@
 		3A0D2BCF253C68C7000A8AF5 /* Pods_Billie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C8B2A27A0AFC15E1242F59D /* Pods_Billie.framework */; };
 		8E02397515BD70091EB3DF07 /* Pods_Billie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C8B2A27A0AFC15E1242F59D /* Pods_Billie.framework */; };
 		BD1EBF06253C86E300CC6A46 /* MediaControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1EBF05253C86E300CC6A46 /* MediaControlView.swift */; };
-		BD785C4B253C916100B3ACAD /* PlayPauseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD785C4A253C916100B3ACAD /* PlayPauseView.swift */; };
 		BD8B024C253C75850054AF76 /* NoteItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD8B024B253C75850054AF76 /* NoteItemView.swift */; };
 		BD8B0256253C791E0054AF76 /* NewNoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD8B0255253C791E0054AF76 /* NewNoteView.swift */; };
 		BD8B025C253C80890054AF76 /* TextArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD8B025B253C80890054AF76 /* TextArea.swift */; };
@@ -119,7 +118,7 @@
 		3A0D2B14253C3DB1000A8AF5 /* SpotifyKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpotifyKit.swift; sourceTree = "<group>"; };
 		3A0D2B15253C3DB1000A8AF5 /* CustomSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomSlider.swift; sourceTree = "<group>"; };
 		3A0D2B16253C3DB2000A8AF5 /* URLImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLImage.swift; sourceTree = "<group>"; };
-		3A0D2B17253C3DB2000A8AF5 /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		3A0D2B17253C3DB2000A8AF5 /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; tabWidth = 2; };
 		3A0D2B18253C3DB2000A8AF5 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		3A0D2B19253C3DB2000A8AF5 /* Keychain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Keychain.swift; sourceTree = "<group>"; };
 		3A0D2B1B253C3DB2000A8AF5 /* WebCommunications.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebCommunications.swift; sourceTree = "<group>"; };
@@ -145,9 +144,8 @@
 		B181BC3C742876DB443F342D /* Pods-BillieTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BillieTests.release.xcconfig"; path = "Target Support Files/Pods-BillieTests/Pods-BillieTests.release.xcconfig"; sourceTree = "<group>"; };
 		B730C291FCC6441BBCC8558E /* Pods-BillieTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BillieTests.debug.xcconfig"; path = "Target Support Files/Pods-BillieTests/Pods-BillieTests.debug.xcconfig"; sourceTree = "<group>"; };
 		BD1EBF05253C86E300CC6A46 /* MediaControlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaControlView.swift; sourceTree = "<group>"; };
-		BD785C4A253C916100B3ACAD /* PlayPauseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayPauseView.swift; sourceTree = "<group>"; };
 		BD8B024B253C75850054AF76 /* NoteItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteItemView.swift; sourceTree = "<group>"; };
-		BD8B0255253C791E0054AF76 /* NewNoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewNoteView.swift; sourceTree = "<group>"; };
+		BD8B0255253C791E0054AF76 /* NewNoteView.swift */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.swift; path = NewNoteView.swift; sourceTree = "<group>"; tabWidth = 2; };
 		BD8B025B253C80890054AF76 /* TextArea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextArea.swift; sourceTree = "<group>"; };
 		EAC7E3A2253C5B230066985A /* NowPlayingSliverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowPlayingSliverView.swift; sourceTree = "<group>"; };
 		EEC38AF50852D6399DA47CBB /* Pods-Billie.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Billie.debug.xcconfig"; path = "Target Support Files/Pods-Billie/Pods-Billie.debug.xcconfig"; sourceTree = "<group>"; };
@@ -307,7 +305,6 @@
 				3A0D2B13253C3DB1000A8AF5 /* NowPlayingView.swift */,
 				BD1EBF05253C86E300CC6A46 /* MediaControlView.swift */,
 				3A0D2B1D253C3DB3000A8AF5 /* ProgressView.swift */,
-				BD785C4A253C916100B3ACAD /* PlayPauseView.swift */,
 				3A0D2B15253C3DB1000A8AF5 /* CustomSlider.swift */,
 				EAC7E3A2253C5B230066985A /* NowPlayingSliverView.swift */,
 			);
@@ -488,7 +485,6 @@
 			mainGroup = 3A0D2AA6253C3893000A8AF5;
 			packageReferences = (
 				3A0D2B02253C3AB7000A8AF5 /* XCRemoteSwiftPackageReference "swiftui-sliders" */,
-				BDA8A4F9253C4A700093A487 /* XCRemoteSwiftPackageReference "MarqueeText" */,
 			);
 			productRefGroup = 3A0D2AB0253C3893000A8AF5 /* Products */;
 			projectDirPath = "";
@@ -659,7 +655,6 @@
 				3A0D2B2B253C3DB3000A8AF5 /* HomeView.swift in Sources */,
 				3A0D2B77253C3F77000A8AF5 /* ContentView.swift in Sources */,
 				3A0D2B26253C3DB3000A8AF5 /* IsPlayingView.swift in Sources */,
-				BD785C4B253C916100B3ACAD /* PlayPauseView.swift in Sources */,
 				3A0D2B42253C3DE0000A8AF5 /* AppDelegate.swift in Sources */,
 				3A0D2B30253C3DB3000A8AF5 /* SearchView.swift in Sources */,
 				3A0D2B1F253C3DB3000A8AF5 /* BlurView.swift in Sources */,
@@ -1098,14 +1093,6 @@
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 1.0.0;
-			};
-		};
-		BDA8A4F9253C4A700093A487 /* XCRemoteSwiftPackageReference "MarqueeText" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/joekndy/MarqueeText.git";
-			requirement = {
-				branch = master;
-				kind = branch;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
