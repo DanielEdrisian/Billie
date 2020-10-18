@@ -14,12 +14,17 @@ struct SpotifyTestView: View {
     
     var body: some View {
         VStack {
-            Image(uiImage: publisher.profileImage ?? UIImage())
-            Button("Login To Spotify") {
-                publisher.connect()
+            if let profileImage = publisher.profileImage {
+                Image(uiImage: profileImage)
+                    .resizable()
+                    .aspectRatio(contentMode: .fill)
+                    .frame(width: UIScreen.main.bounds.width - 100, height: UIScreen.main.bounds.width - 100)
+                    .tRoundCorners(16)
+                    .padding(.top)
+                    .padding(24)
             }
             
-            Spacer()
+//            Spacer()
             
             VStack(alignment: .leading) {
                 Text(publisher.track?.name ?? "")
@@ -39,14 +44,16 @@ struct SpotifyTestView: View {
                 }
             }
             
-            Spacer()
+//            Spacer()
             
-            HStack(spacing: 10) {
+            HStack {
                 Button(action: {
                     publisher.playerAPI?.skip(toPrevious: .none)
                 }) {
                     Image(systemName: "backward.fill")
                 }
+                
+                Spacer(minLength: 10)
                 
                 Button(action: {
                     publisher.playerAPI?.seek(toPosition: publisher.playbackPosition - 15000, callback: nil)
@@ -54,23 +61,25 @@ struct SpotifyTestView: View {
                     Image(systemName: "gobackward.15")
                 }
                 
+                Spacer(minLength: 10)
+                
                 Button(action: {
                     if publisher.isPaused {
                         publisher.playSong(uri: "")
                     }
                 }) {
-                    if publisher.isPaused {
-                        Image(systemName: "play.fill")
-                    } else {
-                        Image(systemName: "pause.fill")
-                    }
+                    Image(systemName: publisher.isPaused ? "play.fill" : "pause.fill")
                 }
+                
+                Spacer(minLength: 10)
                 
                 Button(action: {
                     publisher.playerAPI?.seek(toPosition: publisher.playbackPosition + 15000, callback: nil)
                 }) {
                     Image(systemName: "goforward.15")
                 }
+                
+                Spacer(minLength: 10)
                 
                 Button(action: {
                     publisher.playerAPI?.skip(toNext: .none)

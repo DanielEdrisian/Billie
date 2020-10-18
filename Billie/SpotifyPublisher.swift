@@ -57,11 +57,11 @@ class SpotifyPublisher: NSObject, ObservableObject, SPTAppRemoteDelegate, SPTApp
     }
     
     func connect() {
-        if appRemote.authorizeAndPlayURI("") {
-            
-        } else {
-            fatalError()
-        }
+//        if appRemote.authorizeAndPlayURI("") {
+            manager.authorize()
+//        } else {
+//            fatalError()
+//        }
         
         Timer.scheduledTimer(withTimeInterval: 2.0, repeats: false) { [self] (t) in
             Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { [self] (t) in
