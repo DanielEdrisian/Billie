@@ -9,9 +9,11 @@ import SwiftUI
 
 struct ContentView: View {
     
+    @State var show = false
+    
     var body: some View {
         ZStack {
-            Color.sBackground.edgesIgnoringSafeArea(.all)
+            Color.sBackground//.edgesIgnoringSafeArea(.all)
             TabView {
                 ZStack(alignment: .bottom) {
                     HomeView()
@@ -31,6 +33,11 @@ struct ContentView: View {
                     .background(BlurView(style: .systemThinMaterial))
                     .tRoundCorners(16, corners: [.topLeft, .topRight])
                     .shadow(radius: 4, x: 0, y: -4)
+                    .onTapGesture {
+                        withAnimation(.spring()) {
+                            show.toggle()
+                        }
+                    }
                 }
                 .tabItem {
                     Image(systemName: "house.fill")
@@ -43,6 +50,20 @@ struct ContentView: View {
                         Text("Settings")
                     }
             }
+            
+            SpotifyTestView(publisher: SpotifyPublisher.shared)
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
+                .tRoundCorners(60, corners: [.topLeft, .topRight])
+                .offset(y: show ? 0 : UIScreen.main.bounds.height)
+                .edgesIgnoringSafeArea(.bottom)
+                .transition(.slide)
+                .onTapGesture(count: 2) {
+                    withAnimation(.easeInOut) {
+                        show.toggle()
+                    }
+                }
+                .padding(.top, 40)
+            
         }
         .accentColor(.sRed)
     }
