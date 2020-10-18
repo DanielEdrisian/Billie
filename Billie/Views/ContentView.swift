@@ -53,7 +53,8 @@ struct ContentView: View {
             
             SpotifyTestView(publisher: SpotifyPublisher.shared)
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
-                .tRoundCorners(60, corners: [.topLeft, .topRight])
+                .background(BlurView(style: .systemThickMaterial))
+                .tRoundCorners(40, corners: [.topLeft, .topRight])
                 .offset(y: show ? 0 : UIScreen.main.bounds.height)
                 .edgesIgnoringSafeArea(.bottom)
                 .transition(.slide)
@@ -64,6 +65,9 @@ struct ContentView: View {
                 }
                 .padding(.top, 40)
             
+        }
+        .onAppear {
+            SpotifyPublisher.shared.connect()
         }
         .accentColor(.sRed)
     }
