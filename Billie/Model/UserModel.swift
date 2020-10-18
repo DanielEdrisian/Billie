@@ -14,7 +14,7 @@ class UserModel: ObservableObject {
   @Published private(set) var songs = [SongModel]()
   
   init() {
-    addSong(song: SongModel(id: "1", name: "A Day In The Life", artist: "The Beatles", duration: 300, notes: .init(repeating: .example(), count: 5)))
+//    addSong(song: SongModel(id: "1", name: "A Day In The Life", artist: "The Beatles", duration: 300, notes: .init(repeating: .example(), count: 5)))
   }
   
   init(withSnapshot: DataSnapshot) {
@@ -37,6 +37,16 @@ class UserModel: ObservableObject {
                            notes: notes)
       return song
     })
+  }
+  
+  func readFromRemote(completion: @escaping ((Error?) -> ())) {
+    ref.child(UIDevice.current.identifierForVendor!.uuidString).observe(.value) { (snap) in
+      guard let _ = snap.value else { completion(NSError()); fatalError() }
+            
+      UserModel.shared.fillSongs(withSnapshot: snap)
+      
+      completion(nil)
+    }
   }
   
   func addSong(song: SongModel) {
