@@ -42,8 +42,8 @@ class SongModel: ObservableObject, Identifiable {
     }
 }
 
-extension SongModel {
-    static func example() -> SongModel {
-        SongModel(id: "1", name: "A Day In The Life", artist: "The Beatles", duration: 300, notes: .init(repeating: .example(), count: 5))
-    }
-}
+//extension SongModel {
+//    static func example() -> SongModel {
+//        SongModel(id: "1", name: "A Day In The Life", artist: "The Beatles", duration: 300, notes: .init(repeating: .example(), count: 5))
+//    }
+//}

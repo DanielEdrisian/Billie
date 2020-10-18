@@ -8,7 +8,7 @@
 import Foundation
 
 struct NoteModel: Identifiable {
-    var songId: String?
+    var songId: String
     let id = UUID().uuidString
     
     var title: String
@@ -19,7 +19,7 @@ struct NoteModel: Identifiable {
     var createdAt: Date = Date()
     
     func toDict() -> [String: Any] {
-        ["songId": self.songId ?? "",
+        ["songId": self.songId,
          "id": self.id,
          "title": self.title,
          "description": self.description,
@@ -28,8 +28,8 @@ struct NoteModel: Identifiable {
     }
 }
 
-extension NoteModel {
-    static func example() -> NoteModel {
-        NoteModel(title: "OMG Epic Sax", description: "Epic Sax Solo AHHHHHHHHHH Epic Sax Solo AHHHHHHHHHH Epic Sax Solo AHHHHHHHHHH Epic Sax Solo AHHHHHHHHHH Epic Sax Solo AHHHHHHHHHH Epic Sax Solo AHHHHHHHHHH Epic Sax Solo", timeInSong: 37)
-    }
-}
+//extension NoteModel {
+//    static func example() -> NoteModel {
+//        NoteModel(title: "OMG Epic Sax", description: "Epic Sax Solo AHHHHHHHHHH Epic Sax Solo AHHHHHHHHHH Epic Sax Solo AHHHHHHHHHH Epic Sax Solo AHHHHHHHHHH Epic Sax Solo AHHHHHHHHHH Epic Sax Solo AHHHHHHHHHH Epic Sax Solo", timeInSong: 37)
+//    }
+//}
