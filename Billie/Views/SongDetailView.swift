@@ -24,46 +24,10 @@ struct SongDetailView: View {
             ScrollView {
                 VStack(spacing: 12) {
                     ForEach(song.notes, id: \.id) { note in
-                        HStack {
-                            VStack(alignment: .leading) {
-                                HStack {
-                                    Button(action: {
-                                        publisher.playSong(uri: "")
-                                        publisher.playerAPI?.seek(toPosition: note.timeInSong, callback: .none)
-                                    }) {
-                                        Image(systemName: "play.fill")
-                                            .padding(4)
-                                    }
-                                    Text(note.title)
-                                        .bold()
-                                        .padding(.horizontal)
-                                    Spacer()
-                                    Text("\(note.timeInSong.intToTime)")
-                                        .fontWeight(.light)
-                                    
-                                }
-                                .padding(.horizontal)
-                                
-                                Divider()
-                                
-                                Text(note.description)
-                                    .font(.callout)
-                                    .padding(.bottom)
-                                    .padding(.horizontal)
-                            }
-                        }
-                        .padding(.top)
-                        .background(Color(.secondarySystemBackground))
-                        .cornerRadius(12)
-                        .clipped()
-                        .contextMenu(ContextMenu(menuItems: {
-                            Button(action: {}) {
-                                Label("Share", systemImage: "square.and.arrow.up")
-                            }
-                            Button(action: {}) {
-                                Label("Delete", systemImage: "trash")
-                            }
-                        }))
+                      NoteItemView(note: note) { time in
+                        publisher.playSong(uri: "")
+                        publisher.playerAPI?.seek(toPosition: time, callback: .none)
+                      }
                     }
                 }
                 .padding(.horizontal)
@@ -88,7 +52,7 @@ struct SongDetailNavBar: View {
                 Image(systemName: "chevron.left")
                     .font(.title)
             }
-            
+          
             Spacer()
             
             VStack {
@@ -101,6 +65,10 @@ struct SongDetailNavBar: View {
             Spacer()
             
             Button(action: {
+              if publisher.accessToken == ""  {
+                #warning("replace with uri")
+                publisher.connect(with: "")
+              }
                 if publisher.isPaused {
                     publisher.appRemote.playerAPI?.resume { (whatever, error) in
                         print(error ?? "")

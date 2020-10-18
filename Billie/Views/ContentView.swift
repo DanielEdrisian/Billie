@@ -40,22 +40,23 @@ struct ContentView: View {
                         Text("Settings")
                     }
             }
-            
-            SpotifyTestView(publisher: publisher)
-                .frame(maxWidth: .infinity, maxHeight: .infinity)
-                .background(BlurView(style: .systemThickMaterial))
-                .tRoundCorners(40, corners: [.topLeft, .topRight])
-                .offset(y: show ? 0 : UIScreen.main.bounds.height)
-                .edgesIgnoringSafeArea(.bottom)
-                .transition(.slide)
-                .onTapGesture(count: 2) {
-                    withAnimation(.easeInOut) {
-                        show.toggle()
-                    }
-                }
-                .padding(.top, 40)
         }
         .accentColor(.sRed)
+        .sheet(isPresented: $show) {
+          NowPlayingView(publisher: publisher)
+//              .frame(maxWidth: .infinity, maxHeight: .infinity)
+              .background(BlurView(style: .systemThickMaterial))
+//              .tRoundCorners(40, corners: [.topLeft, .topRight])
+//              .offset(y: show ? 0 : UIScreen.main.bounds.height)
+//              .edgesIgnoringSafeArea(.bottom)
+//              .transition(.slide)
+              .onTapGesture(count: 2) {
+                  withAnimation(.easeInOut) {
+                      show.toggle()
+                  }
+              }
+//              .padding(.top, 40)
+        }
     }
 }
 

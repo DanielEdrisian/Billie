@@ -69,13 +69,13 @@ class SpotifyPublisher: NSObject, ObservableObject, SPTAppRemoteDelegate, SPTApp
         
         Timer.scheduledTimer(withTimeInterval: 2.0, repeats: false) { [self] (t) in
             
-            #warning("This will be nil and crash")
-            self.playerAPI!.play(uri, asRadio: false, callback: { (res, error) in
-                if let e = error {
-                    print(e)
-                }
-            }
-            )
+//            #warning("This will be nil and crash")
+//            self.playerAPI!.play(uri, asRadio: false, callback: { (res, error) in
+//                if let e = error {
+//                    print(e)
+//                }
+//            }
+//            )
             
             Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { [self] (t) in
                 getPlayerState()
