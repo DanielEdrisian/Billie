@@ -12,7 +12,6 @@ struct SongDetailView: View {
     @Environment(\.presentationMode) var presentationMode
     @ObservedObject var publisher: SpotifyPublisher
     
-    #warning("change to correct song model")
     var song: SongModel
     
     @State private var isPlaying: Bool = false
@@ -29,7 +28,6 @@ struct SongDetailView: View {
                             VStack(alignment: .leading) {
                                 HStack {
                                     Button(action: {
-                                        #warning("change to song uri and timestamp")
                                         publisher.playSong(uri: "")
                                         publisher.playerAPI?.seek(toPosition: note.timeInSong, callback: .none)
                                     }) {
