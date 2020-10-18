@@ -51,6 +51,7 @@
 		BD8B025C253C80890054AF76 /* TextArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD8B025B253C80890054AF76 /* TextArea.swift */; };
 		E8930187E15B9353ACAAEB49 /* Pods_Billie_BillieUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38AAA8AB1C573CCE177A1EFA /* Pods_Billie_BillieUITests.framework */; };
 		EAC7E3A3253C5B230066985A /* NowPlayingSliverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC7E3A2253C5B230066985A /* NowPlayingSliverView.swift */; };
+		EAC7E41D253CA3330066985A /* PlayPauseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC7E41C253CA3330066985A /* PlayPauseView.swift */; };
 		EDE56DF864BCC54B5C2B53B7 /* Pods_BillieTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BF08051362EDE22C5996D88 /* Pods_BillieTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -148,6 +149,7 @@
 		BD8B0255253C791E0054AF76 /* NewNoteView.swift */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.swift; path = NewNoteView.swift; sourceTree = "<group>"; tabWidth = 2; };
 		BD8B025B253C80890054AF76 /* TextArea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextArea.swift; sourceTree = "<group>"; };
 		EAC7E3A2253C5B230066985A /* NowPlayingSliverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowPlayingSliverView.swift; sourceTree = "<group>"; };
+		EAC7E41C253CA3330066985A /* PlayPauseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayPauseView.swift; sourceTree = "<group>"; };
 		EEC38AF50852D6399DA47CBB /* Pods-Billie.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Billie.debug.xcconfig"; path = "Target Support Files/Pods-Billie/Pods-Billie.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -307,6 +309,7 @@
 				3A0D2B1D253C3DB3000A8AF5 /* ProgressView.swift */,
 				3A0D2B15253C3DB1000A8AF5 /* CustomSlider.swift */,
 				EAC7E3A2253C5B230066985A /* NowPlayingSliverView.swift */,
+				EAC7E41C253CA3330066985A /* PlayPauseView.swift */,
 			);
 			path = "Now Playing";
 			sourceTree = "<group>";
@@ -655,6 +658,7 @@
 				3A0D2B2B253C3DB3000A8AF5 /* HomeView.swift in Sources */,
 				3A0D2B77253C3F77000A8AF5 /* ContentView.swift in Sources */,
 				3A0D2B26253C3DB3000A8AF5 /* IsPlayingView.swift in Sources */,
+				EAC7E41D253CA3330066985A /* PlayPauseView.swift in Sources */,
 				3A0D2B42253C3DE0000A8AF5 /* AppDelegate.swift in Sources */,
 				3A0D2B30253C3DB3000A8AF5 /* SearchView.swift in Sources */,
 				3A0D2B1F253C3DB3000A8AF5 /* BlurView.swift in Sources */,
