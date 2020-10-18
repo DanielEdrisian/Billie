@@ -3,4 +3,86 @@
    uuid = "D64CDC14-7E2F-4378-91F5-936F71757D6B"
    type = "0"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BC479FF3-A4B8-46BD-8B6F-7DDF3C4996E9"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Billie/SpotifyPublisher.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "51"
+            endingLineNumber = "51"
+            landmarkName = "playSong(uri:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "132E2316-D385-48DC-BDB7-23D4A5BDC162"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Billie/SpotifyPublisher.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "45"
+            endingLineNumber = "45"
+            landmarkName = "playSong(uri:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "132E2316-D385-48DC-BDB7-23D4A5BDC162 - 148d7e0a3aeb60de"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Billie.SpotifyPublisher.playSong(uri: Swift.String) -&gt; ()"
+                  moduleName = "Billie"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/danieledrisian/Desktop/Billie/Billie/SpotifyPublisher.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "53"
+                  endingLineNumber = "53"
+                  offsetFromSymbolStart = "176">
+               </Location>
+               <Location
+                  uuid = "132E2316-D385-48DC-BDB7-23D4A5BDC162 - bf7964db4d394db"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Any&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Billie.SpotifyPublisher.playSong(uri: Swift.String) -&gt; ()"
+                  moduleName = "Billie"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/danieledrisian/Desktop/Billie/Billie/SpotifyPublisher.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "54"
+                  endingLineNumber = "54"
+                  offsetFromSymbolStart = "44">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "81CB0015-FB0D-4DFC-AE32-54197E4E2483"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Billie/SpotifyPublisher.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "44"
+            endingLineNumber = "44"
+            landmarkName = "playSong(uri:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

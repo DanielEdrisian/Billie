@@ -14,7 +14,7 @@ struct NowPlayingSliverView: View {
     
     var body: some View {
         HStack(spacing: 4) {
-          Image(uiImage: publisher.profileImage ?? UIImage())
+          Image(uiImage: publisher.albumImage ?? UIImage())
             .resizable()
             .scaledToFit()
             .frame(width: 50, height: 50)
