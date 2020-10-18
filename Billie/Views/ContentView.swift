@@ -6,10 +6,12 @@
 //
 
 import SwiftUI
+import MediaPlayer
 
 struct ContentView: View {
     
     @State var show = false
+    @ObservedObject var publisher = SpotifyPublisher.shared
     
     var body: some View {
         ZStack {
@@ -17,26 +19,8 @@ struct ContentView: View {
             TabView {
                 ZStack(alignment: .bottom) {
                     HomeView()
-                    HStack(spacing: 4) {
-                        RoundedRectangle(cornerRadius: 6).fill(Color.secondary).frame(width: 50, height: 50)
-                        
-                        Text("bad guy")
-                            .font(.subheadline)
-                            .padding(.leading)
-                        
-                        Spacer()
-                        
-                        Image(systemName: "play.fill")
-                            .font(.title)
-                    }
-                    .padding()
-                    .background(BlurView(style: .systemThinMaterial))
-                    .tRoundCorners(16, corners: [.topLeft, .topRight])
-                    .shadow(radius: 4, x: 0, y: -4)
-                    .onTapGesture {
-                        withAnimation(.spring()) {
-                            show.toggle()
-                        }
+                    if publisher.track != nil {
+                        NowPlayingSliverView(show: $show)
                     }
                 }
                 .tabItem {
@@ -44,7 +28,7 @@ struct ContentView: View {
                     Text("Home")
                 }
                 
-                SearchView(publisher: SpotifyPublisher.shared)
+                SearchView(publisher: publisher)
                     .tabItem {
                         Image(systemName: "magnifyingglass")
                         Text("Search")
@@ -57,7 +41,7 @@ struct ContentView: View {
                     }
             }
             
-            SpotifyTestView(publisher: SpotifyPublisher.shared)
+            SpotifyTestView(publisher: publisher)
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
                 .background(BlurView(style: .systemThickMaterial))
                 .tRoundCorners(40, corners: [.topLeft, .topRight])
@@ -70,9 +54,6 @@ struct ContentView: View {
                     }
                 }
                 .padding(.top, 40)
-        }
-        .onAppear {
-            SpotifyPublisher.shared.connect()
         }
         .accentColor(.sRed)
     }

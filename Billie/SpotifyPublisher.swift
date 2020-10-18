@@ -40,12 +40,16 @@ class SpotifyPublisher: NSObject, ObservableObject, SPTAppRemoteDelegate, SPTApp
     }
     
     func playSong(uri: String) {
-        self.playerAPI?.play(uri, asRadio: false, callback: { (res, error) in
-            if let e = error {
-              print(e)
+        if appRemote.isConnected {
+            self.playerAPI?.play(uri, asRadio: false, callback: { (res, error) in
+                if let e = error {
+                    print(e)
+                }
             }
-          }
-        )
+            )
+        } else {
+            connect(with: uri)
+        }
     }
     
     override init() {
@@ -56,14 +60,23 @@ class SpotifyPublisher: NSObject, ObservableObject, SPTAppRemoteDelegate, SPTApp
         manager.delegate = self
     }
     
-    func connect() {
-//        if appRemote.authorizeAndPlayURI("") {
-            manager.authorize()
-//        } else {
-//            fatalError()
-//        }
+    func connect(with uri: String) {
+        if appRemote.authorizeAndPlayURI(uri) {
+            
+        } else {
+            fatalError()
+        }
         
         Timer.scheduledTimer(withTimeInterval: 2.0, repeats: false) { [self] (t) in
+            
+            #warning("This will be nil and crash")
+            self.playerAPI!.play(uri, asRadio: false, callback: { (res, error) in
+                if let e = error {
+                    print(e)
+                }
+            }
+            )
+            
             Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { [self] (t) in
                 getPlayerState()
             }
