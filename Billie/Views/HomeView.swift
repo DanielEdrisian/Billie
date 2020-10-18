@@ -15,15 +15,22 @@ struct HomeView: View {
     NavigationView {
       ScrollView(.vertical) {
         VStack(alignment: .leading, spacing: 8) {
-          Text("Recents")
-            .font(.title2)
-            .bold()
-          
-          ForEach(user.songs, id: \.id) { song in
-            NavigationLink(destination: SongDetailView(publisher: SpotifyPublisher.shared, song: song)) {
-              SongItemView(song: song)
+          if !user.songs.isEmpty {
+            Text("Recents")
+              .font(.title2).bold()
+              .frame(maxWidth: .infinity)
+            
+            ForEach(user.songs, id: \.id) { song in
+              NavigationLink(destination: SongDetailView(publisher: SpotifyPublisher.shared, song: song)) {
+                SongItemView(song: song)
+              }
+              .buttonStyle(PlainButtonStyle())
             }
-            .buttonStyle(PlainButtonStyle())
+          } else {
+            Text("No Notes")
+              .font(.title2)
+              .fontWeight(.semibold)
+            Text("You haven't created any song notes yet. Go play songs and make some!")
           }
           
           Spacer()

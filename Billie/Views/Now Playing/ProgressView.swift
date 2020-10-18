@@ -16,7 +16,7 @@ struct ProgressView: View {
         CustomSlider(value: $current, range: (0, total), knobWidth: 4, onChange: onChange) { modifiers, isDragging in
             ZStack {
                 Group {
-                    Color(isDragging ? .cyan : .darkGray)
+                    Color(isDragging ? .label : .darkGray)
                         .modifier(modifiers.barLeft)
                         .cornerRadius(5)
                     
@@ -27,7 +27,7 @@ struct ProgressView: View {
                     
                     RoundedRectangle(cornerRadius: 2)
                         .frame(width: 8, height: 20)
-                        .foregroundColor(Color(isDragging ? .cyan : .darkGray))
+                        .foregroundColor(isDragging ? .sRed : .secondary)
                         .modifier(modifiers.knob)
                 }
             }

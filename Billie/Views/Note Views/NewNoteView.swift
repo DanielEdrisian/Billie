@@ -27,7 +27,7 @@ struct NewNoteView: View {
               add(note)
             }
           }) {
-            Image(systemName: "plus.circle")
+            Image(systemName: "plus.circle.fill")
               .foregroundColor(currentTitle.isEmpty || currentDescription.isEmpty ?
                                 Color.gray
                                 : Color.accentColor

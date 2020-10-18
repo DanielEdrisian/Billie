@@ -44,8 +44,6 @@ struct NowPlayingView: View {
                   }
               }.padding(.vertical, 75)
               
-  //            Spacer()
-              
               MediaControlView()
           
           NewNoteView(songId: publisher.track?.uri, currentPositionMillisecs: publisher.playbackPosition) { note in
@@ -53,6 +51,7 @@ struct NowPlayingView: View {
           }
         }
         .padding(.horizontal)
+        .padding(.bottom)
       }
     }
     
