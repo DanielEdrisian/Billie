@@ -3,18 +3,38 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3A0D2AB3253C3893000A8AF5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0D2AB2253C3893000A8AF5 /* AppDelegate.swift */; };
-		3A0D2AB5253C3893000A8AF5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0D2AB4253C3893000A8AF5 /* SceneDelegate.swift */; };
-		3A0D2AB7253C3893000A8AF5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0D2AB6253C3893000A8AF5 /* ContentView.swift */; };
 		3A0D2AB9253C3894000A8AF5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A0D2AB8253C3894000A8AF5 /* Assets.xcassets */; };
 		3A0D2ABC253C3894000A8AF5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A0D2ABB253C3894000A8AF5 /* Preview Assets.xcassets */; };
 		3A0D2ABF253C3894000A8AF5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A0D2ABD253C3894000A8AF5 /* LaunchScreen.storyboard */; };
 		3A0D2ACA253C3894000A8AF5 /* BillieTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0D2AC9253C3894000A8AF5 /* BillieTests.swift */; };
 		3A0D2AD5253C3894000A8AF5 /* BillieUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0D2AD4253C3894000A8AF5 /* BillieUITests.swift */; };
+		3A0D2B04253C3AB7000A8AF5 /* Sliders in Frameworks */ = {isa = PBXBuildFile; productRef = 3A0D2B03253C3AB7000A8AF5 /* Sliders */; };
+		3A0D2B1E253C3DB3000A8AF5 /* SongDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0D2B0A253C3DB0000A8AF5 /* SongDetailView.swift */; };
+		3A0D2B1F253C3DB3000A8AF5 /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0D2B0B253C3DB0000A8AF5 /* BlurView.swift */; };
+		3A0D2B20253C3DB3000A8AF5 /* SpotifyItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0D2B0C253C3DB0000A8AF5 /* SpotifyItems.swift */; };
+		3A0D2B22253C3DB3000A8AF5 /* NoteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0D2B0E253C3DB1000A8AF5 /* NoteModel.swift */; };
+		3A0D2B24253C3DB3000A8AF5 /* SongModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0D2B10253C3DB1000A8AF5 /* SongModel.swift */; };
+		3A0D2B25253C3DB3000A8AF5 /* SpotifyPublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0D2B11253C3DB1000A8AF5 /* SpotifyPublisher.swift */; };
+		3A0D2B26253C3DB3000A8AF5 /* IsPlayingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0D2B12253C3DB1000A8AF5 /* IsPlayingView.swift */; };
+		3A0D2B27253C3DB3000A8AF5 /* SpotifyTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0D2B13253C3DB1000A8AF5 /* SpotifyTestView.swift */; };
+		3A0D2B28253C3DB3000A8AF5 /* SpotifyKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0D2B14253C3DB1000A8AF5 /* SpotifyKit.swift */; };
+		3A0D2B29253C3DB3000A8AF5 /* CustomSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0D2B15253C3DB1000A8AF5 /* CustomSlider.swift */; };
+		3A0D2B2A253C3DB3000A8AF5 /* URLImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0D2B16253C3DB2000A8AF5 /* URLImage.swift */; };
+		3A0D2B2B253C3DB3000A8AF5 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0D2B17253C3DB2000A8AF5 /* HomeView.swift */; };
+		3A0D2B2C253C3DB3000A8AF5 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0D2B18253C3DB2000A8AF5 /* Extensions.swift */; };
+		3A0D2B2D253C3DB3000A8AF5 /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0D2B19253C3DB2000A8AF5 /* Keychain.swift */; };
+		3A0D2B2E253C3DB3000A8AF5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0D2B1A253C3DB2000A8AF5 /* SceneDelegate.swift */; };
+		3A0D2B2F253C3DB3000A8AF5 /* WebCommunications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0D2B1B253C3DB2000A8AF5 /* WebCommunications.swift */; };
+		3A0D2B30253C3DB3000A8AF5 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0D2B1C253C3DB2000A8AF5 /* SearchView.swift */; };
+		3A0D2B31253C3DB3000A8AF5 /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0D2B1D253C3DB3000A8AF5 /* ProgressView.swift */; };
+		3A0D2B42253C3DE0000A8AF5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0D2B41253C3DE0000A8AF5 /* AppDelegate.swift */; };
+		3A0D2B6E253C3F18000A8AF5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3A0D2B6D253C3F18000A8AF5 /* GoogleService-Info.plist */; };
+		3A0D2B73253C3F37000A8AF5 /* SpotifyiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A0D2B72253C3F37000A8AF5 /* SpotifyiOS.framework */; };
+		3A0D2B77253C3F77000A8AF5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0D2B47253C3DFC000A8AF5 /* ContentView.swift */; };
 		8E02397515BD70091EB3DF07 /* Pods_Billie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C8B2A27A0AFC15E1242F59D /* Pods_Billie.framework */; };
 		E8930187E15B9353ACAAEB49 /* Pods_Billie_BillieUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38AAA8AB1C573CCE177A1EFA /* Pods_Billie_BillieUITests.framework */; };
 		EDE56DF864BCC54B5C2B53B7 /* Pods_BillieTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BF08051362EDE22C5996D88 /* Pods_BillieTests.framework */; };
@@ -42,9 +62,6 @@
 		2BA97442031A5FDFF5FDFB68 /* Pods-Billie-BillieUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Billie-BillieUITests.debug.xcconfig"; path = "Target Support Files/Pods-Billie-BillieUITests/Pods-Billie-BillieUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		38AAA8AB1C573CCE177A1EFA /* Pods_Billie_BillieUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Billie_BillieUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A0D2AAF253C3893000A8AF5 /* Billie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Billie.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		3A0D2AB2253C3893000A8AF5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3A0D2AB4253C3893000A8AF5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		3A0D2AB6253C3893000A8AF5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		3A0D2AB8253C3894000A8AF5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3A0D2ABB253C3894000A8AF5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		3A0D2ABE253C3894000A8AF5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -55,6 +72,29 @@
 		3A0D2AD0253C3894000A8AF5 /* BillieUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BillieUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A0D2AD4253C3894000A8AF5 /* BillieUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillieUITests.swift; sourceTree = "<group>"; };
 		3A0D2AD6253C3894000A8AF5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3A0D2B0A253C3DB0000A8AF5 /* SongDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongDetailView.swift; sourceTree = "<group>"; };
+		3A0D2B0B253C3DB0000A8AF5 /* BlurView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlurView.swift; sourceTree = "<group>"; };
+		3A0D2B0C253C3DB0000A8AF5 /* SpotifyItems.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpotifyItems.swift; sourceTree = "<group>"; };
+		3A0D2B0E253C3DB1000A8AF5 /* NoteModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteModel.swift; sourceTree = "<group>"; };
+		3A0D2B10253C3DB1000A8AF5 /* SongModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongModel.swift; sourceTree = "<group>"; };
+		3A0D2B11253C3DB1000A8AF5 /* SpotifyPublisher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpotifyPublisher.swift; sourceTree = "<group>"; };
+		3A0D2B12253C3DB1000A8AF5 /* IsPlayingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IsPlayingView.swift; sourceTree = "<group>"; };
+		3A0D2B13253C3DB1000A8AF5 /* SpotifyTestView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpotifyTestView.swift; sourceTree = "<group>"; };
+		3A0D2B14253C3DB1000A8AF5 /* SpotifyKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpotifyKit.swift; sourceTree = "<group>"; };
+		3A0D2B15253C3DB1000A8AF5 /* CustomSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomSlider.swift; sourceTree = "<group>"; };
+		3A0D2B16253C3DB2000A8AF5 /* URLImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLImage.swift; sourceTree = "<group>"; };
+		3A0D2B17253C3DB2000A8AF5 /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		3A0D2B18253C3DB2000A8AF5 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		3A0D2B19253C3DB2000A8AF5 /* Keychain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Keychain.swift; sourceTree = "<group>"; };
+		3A0D2B1A253C3DB2000A8AF5 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SceneDelegate.swift; path = "../../HackNC-2020/HackNC2020/HackNC2020/SceneDelegate.swift"; sourceTree = "<group>"; };
+		3A0D2B1B253C3DB2000A8AF5 /* WebCommunications.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebCommunications.swift; sourceTree = "<group>"; };
+		3A0D2B1C253C3DB2000A8AF5 /* SearchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		3A0D2B1D253C3DB3000A8AF5 /* ProgressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
+		3A0D2B41253C3DE0000A8AF5 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3A0D2B47253C3DFC000A8AF5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		3A0D2B64253C3EE9000A8AF5 /* Billie-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Billie-Bridging-Header.h"; sourceTree = "<group>"; };
+		3A0D2B6D253C3F18000A8AF5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		3A0D2B72253C3F37000A8AF5 /* SpotifyiOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SpotifyiOS.framework; sourceTree = "<group>"; };
 		4BF08051362EDE22C5996D88 /* Pods_BillieTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BillieTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A68833B8E50929105E9E0F8 /* Pods-Billie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Billie.release.xcconfig"; path = "Target Support Files/Pods-Billie/Pods-Billie.release.xcconfig"; sourceTree = "<group>"; };
 		A0C9C966036D73F3BD1AC7BA /* Pods-Billie-BillieUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Billie-BillieUITests.release.xcconfig"; path = "Target Support Files/Pods-Billie-BillieUITests/Pods-Billie-BillieUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -69,6 +109,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				8E02397515BD70091EB3DF07 /* Pods_Billie.framework in Frameworks */,
+				3A0D2B73253C3F37000A8AF5 /* SpotifyiOS.framework in Frameworks */,
+				3A0D2B04253C3AB7000A8AF5 /* Sliders in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,6 +136,7 @@
 		1F473D774CD7E6D5A9BDDCC6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3A0D2B72253C3F37000A8AF5 /* SpotifyiOS.framework */,
 				1C8B2A27A0AFC15E1242F59D /* Pods_Billie.framework */,
 				38AAA8AB1C573CCE177A1EFA /* Pods_Billie_BillieUITests.framework */,
 				4BF08051362EDE22C5996D88 /* Pods_BillieTests.framework */,
@@ -126,13 +169,19 @@
 		3A0D2AB1253C3893000A8AF5 /* Billie */ = {
 			isa = PBXGroup;
 			children = (
-				3A0D2AB2253C3893000A8AF5 /* AppDelegate.swift */,
-				3A0D2AB4253C3893000A8AF5 /* SceneDelegate.swift */,
-				3A0D2AB6253C3893000A8AF5 /* ContentView.swift */,
+				3A0D2B41253C3DE0000A8AF5 /* AppDelegate.swift */,
+				3A0D2B1A253C3DB2000A8AF5 /* SceneDelegate.swift */,
+				3A0D2B11253C3DB1000A8AF5 /* SpotifyPublisher.swift */,
+				3A0D2B46253C3DFC000A8AF5 /* Views */,
+				3A0D2B56253C3E82000A8AF5 /* Util */,
+				3A0D2B4E253C3E44000A8AF5 /* SpotifyKit */,
+				3A0D2B5A253C3E8B000A8AF5 /* Model */,
 				3A0D2AB8253C3894000A8AF5 /* Assets.xcassets */,
 				3A0D2ABD253C3894000A8AF5 /* LaunchScreen.storyboard */,
 				3A0D2AC0253C3894000A8AF5 /* Info.plist */,
+				3A0D2B6D253C3F18000A8AF5 /* GoogleService-Info.plist */,
 				3A0D2ABA253C3894000A8AF5 /* Preview Content */,
+				3A0D2B64253C3EE9000A8AF5 /* Billie-Bridging-Header.h */,
 			);
 			path = Billie;
 			sourceTree = "<group>";
@@ -163,6 +212,59 @@
 			path = BillieUITests;
 			sourceTree = "<group>";
 		};
+		3A0D2B46253C3DFC000A8AF5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3A0D2B52253C3E71000A8AF5 /* Now Playing */,
+				3A0D2B47253C3DFC000A8AF5 /* ContentView.swift */,
+				3A0D2B17253C3DB2000A8AF5 /* HomeView.swift */,
+				3A0D2B0A253C3DB0000A8AF5 /* SongDetailView.swift */,
+				3A0D2B12253C3DB1000A8AF5 /* IsPlayingView.swift */,
+				3A0D2B1C253C3DB2000A8AF5 /* SearchView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		3A0D2B4E253C3E44000A8AF5 /* SpotifyKit */ = {
+			isa = PBXGroup;
+			children = (
+				3A0D2B19253C3DB2000A8AF5 /* Keychain.swift */,
+				3A0D2B0C253C3DB0000A8AF5 /* SpotifyItems.swift */,
+				3A0D2B14253C3DB1000A8AF5 /* SpotifyKit.swift */,
+				3A0D2B1B253C3DB2000A8AF5 /* WebCommunications.swift */,
+			);
+			path = SpotifyKit;
+			sourceTree = "<group>";
+		};
+		3A0D2B52253C3E71000A8AF5 /* Now Playing */ = {
+			isa = PBXGroup;
+			children = (
+				3A0D2B1D253C3DB3000A8AF5 /* ProgressView.swift */,
+				3A0D2B13253C3DB1000A8AF5 /* SpotifyTestView.swift */,
+				3A0D2B15253C3DB1000A8AF5 /* CustomSlider.swift */,
+			);
+			path = "Now Playing";
+			sourceTree = "<group>";
+		};
+		3A0D2B56253C3E82000A8AF5 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				3A0D2B16253C3DB2000A8AF5 /* URLImage.swift */,
+				3A0D2B0B253C3DB0000A8AF5 /* BlurView.swift */,
+				3A0D2B18253C3DB2000A8AF5 /* Extensions.swift */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		3A0D2B5A253C3E8B000A8AF5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3A0D2B0E253C3DB1000A8AF5 /* NoteModel.swift */,
+				3A0D2B10253C3DB1000A8AF5 /* SongModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		64CDC6D699C4C1EE12D08B84 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -173,7 +275,6 @@
 				B730C291FCC6441BBCC8558E /* Pods-BillieTests.debug.xcconfig */,
 				B181BC3C742876DB443F342D /* Pods-BillieTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -195,6 +296,9 @@
 			dependencies = (
 			);
 			name = Billie;
+			packageProductDependencies = (
+				3A0D2B03253C3AB7000A8AF5 /* Sliders */,
+			);
 			productName = Billie;
 			productReference = 3A0D2AAF253C3893000A8AF5 /* Billie.app */;
 			productType = "com.apple.product-type.application";
@@ -249,6 +353,7 @@
 				TargetAttributes = {
 					3A0D2AAE253C3893000A8AF5 = {
 						CreatedOnToolsVersion = 12.0;
+						LastSwiftMigration = 1200;
 					};
 					3A0D2AC4253C3894000A8AF5 = {
 						CreatedOnToolsVersion = 12.0;
@@ -269,6 +374,9 @@
 				Base,
 			);
 			mainGroup = 3A0D2AA6253C3893000A8AF5;
+			packageReferences = (
+				3A0D2B02253C3AB7000A8AF5 /* XCRemoteSwiftPackageReference "swiftui-sliders" */,
+			);
 			productRefGroup = 3A0D2AB0253C3893000A8AF5 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -286,6 +394,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3A0D2ABF253C3894000A8AF5 /* LaunchScreen.storyboard in Resources */,
+				3A0D2B6E253C3F18000A8AF5 /* GoogleService-Info.plist in Resources */,
 				3A0D2ABC253C3894000A8AF5 /* Preview Assets.xcassets in Resources */,
 				3A0D2AB9253C3894000A8AF5 /* Assets.xcassets in Resources */,
 			);
@@ -415,9 +524,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3A0D2AB3253C3893000A8AF5 /* AppDelegate.swift in Sources */,
-				3A0D2AB5253C3893000A8AF5 /* SceneDelegate.swift in Sources */,
-				3A0D2AB7253C3893000A8AF5 /* ContentView.swift in Sources */,
+				3A0D2B1E253C3DB3000A8AF5 /* SongDetailView.swift in Sources */,
+				3A0D2B2C253C3DB3000A8AF5 /* Extensions.swift in Sources */,
+				3A0D2B29253C3DB3000A8AF5 /* CustomSlider.swift in Sources */,
+				3A0D2B28253C3DB3000A8AF5 /* SpotifyKit.swift in Sources */,
+				3A0D2B22253C3DB3000A8AF5 /* NoteModel.swift in Sources */,
+				3A0D2B2B253C3DB3000A8AF5 /* HomeView.swift in Sources */,
+				3A0D2B77253C3F77000A8AF5 /* ContentView.swift in Sources */,
+				3A0D2B26253C3DB3000A8AF5 /* IsPlayingView.swift in Sources */,
+				3A0D2B42253C3DE0000A8AF5 /* AppDelegate.swift in Sources */,
+				3A0D2B30253C3DB3000A8AF5 /* SearchView.swift in Sources */,
+				3A0D2B1F253C3DB3000A8AF5 /* BlurView.swift in Sources */,
+				3A0D2B2D253C3DB3000A8AF5 /* Keychain.swift in Sources */,
+				3A0D2B25253C3DB3000A8AF5 /* SpotifyPublisher.swift in Sources */,
+				3A0D2B24253C3DB3000A8AF5 /* SongModel.swift in Sources */,
+				3A0D2B2E253C3DB3000A8AF5 /* SceneDelegate.swift in Sources */,
+				3A0D2B2F253C3DB3000A8AF5 /* WebCommunications.swift in Sources */,
+				3A0D2B27253C3DB3000A8AF5 /* SpotifyTestView.swift in Sources */,
+				3A0D2B20253C3DB3000A8AF5 /* SpotifyItems.swift in Sources */,
+				3A0D2B31253C3DB3000A8AF5 /* ProgressView.swift in Sources */,
+				3A0D2B2A253C3DB3000A8AF5 /* URLImage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -586,17 +712,24 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Billie/Preview Content\"";
 				DEVELOPMENT_TEAM = W2PUF8XW54;
 				ENABLE_PREVIEWS = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = Billie/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.DanielEdrisian.Billie;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mnabokow.HackNC2020;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Billie/Billie-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -608,17 +741,23 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Billie/Preview Content\"";
 				DEVELOPMENT_TEAM = W2PUF8XW54;
 				ENABLE_PREVIEWS = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = Billie/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.DanielEdrisian.Billie;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mnabokow.HackNC2020;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Billie/Billie-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -752,6 +891,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		3A0D2B02253C3AB7000A8AF5 /* XCRemoteSwiftPackageReference "swiftui-sliders" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/swift-extensions/swiftui-sliders.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		3A0D2B03253C3AB7000A8AF5 /* Sliders */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3A0D2B02253C3AB7000A8AF5 /* XCRemoteSwiftPackageReference "swiftui-sliders" */;
+			productName = Sliders;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 3A0D2AA7253C3893000A8AF5 /* Project object */;
 }
