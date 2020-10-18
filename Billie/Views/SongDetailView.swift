@@ -10,12 +10,16 @@ import SwiftUI
 struct SongDetailView: View {
     
     @Environment(\.presentationMode) var presentationMode
+    @ObservedObject var publisher: SpotifyPublisher
+    
+    #warning("change to correct song model")
     var song: SongModel
+    
     @State private var isPlaying: Bool = false
     
     var body: some View {
         VStack(alignment: .leading) {
-            SongDetailNavBar(song: song, isPlaying: $isPlaying, backAction: { presentationMode.wrappedValue.dismiss() })
+            SongDetailNavBar(publisher: SpotifyPublisher.shared, song: song, isPlaying: $isPlaying, backAction: { presentationMode.wrappedValue.dismiss() })
                 .padding(.horizontal)
             
             ScrollView {
@@ -24,7 +28,11 @@ struct SongDetailView: View {
                         HStack {
                             VStack(alignment: .leading) {
                                 HStack {
-                                    Button(action: {}) {
+                                    Button(action: {
+                                        #warning("change to song uri and timestamp")
+                                        publisher.playSong(uri: "")
+                                        publisher.playerAPI?.seek(toPosition: note.timeInSong, callback: .none)
+                                    }) {
                                         Image(systemName: "play.fill")
                                             .padding(4)
                                     }
@@ -68,14 +76,9 @@ struct SongDetailView: View {
     
 }
 
-struct SongDetailView_Previews: PreviewProvider {
-    static var previews: some View {
-        SongDetailView(song: .example())
-            .preferredColorScheme(.dark)
-    }
-}
-
 struct SongDetailNavBar: View {
+    
+    @ObservedObject var publisher: SpotifyPublisher
     
     var song: SongModel
     @Binding var isPlaying: Bool
@@ -99,12 +102,21 @@ struct SongDetailNavBar: View {
             }
             Spacer()
             
-            Button(action: { isPlaying.toggle() }) {
-                if isPlaying {
-                    IsPlayingView()
+            Button(action: {
+                if publisher.isPaused {
+                    publisher.appRemote.playerAPI?.resume { (whatever, error) in
+                        print(error ?? "")
+                    }
                 } else {
+                    publisher.appRemote.playerAPI?.pause { (whatever, error) in
+                        print(error ?? "")
+                    }
+                }
+            }) {
+                if publisher.isPaused {
                     Image(systemName: "play.fill")
-                        .font(.title2)
+                } else {
+                    IsPlayingView()
                 }
             }
             .frame(width: 45, height: 45)

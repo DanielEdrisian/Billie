@@ -69,10 +69,6 @@ struct ContentView: View {
                     }
                 }
                 .padding(.top, 40)
-<<<<<<< HEAD
-=======
-            
->>>>>>> 968a26b8f13700e84b952a3d98ee4d640f15a8e0
         }
         .accentColor(.sRed)
     }

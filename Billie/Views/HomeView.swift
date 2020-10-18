@@ -20,7 +20,7 @@ struct HomeView: View {
                         .bold()
                     
                     ForEach(songs, id: \.id) { song in
-                        NavigationLink(destination: SongDetailView(song: song)) {
+                        NavigationLink(destination: SongDetailView(publisher: SpotifyPublisher.shared, song: song)) {
                             SongItemView(song: song)
                         }
                         .buttonStyle(PlainButtonStyle())
