@@ -47,6 +47,11 @@ struct NowPlayingView: View {
   //            Spacer()
               
               MediaControlView()
+                .padding(.bottom, 50)
+          
+          Text("Add a New Note")
+            .font(.callout)
+            .foregroundColor(.secondary)
           
           NewNoteView(songId: publisher.track?.uri, currentPositionMillisecs: publisher.playbackPosition) { note in
             user.addNote(note: note, song: .init(track: publisher.track!))
