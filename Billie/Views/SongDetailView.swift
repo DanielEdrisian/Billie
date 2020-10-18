@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct SongDetailView: View {
-    
+  @Binding var show: Bool
     @Environment(\.presentationMode) var presentationMode
     @ObservedObject var publisher: SpotifyPublisher
     
@@ -18,15 +18,16 @@ struct SongDetailView: View {
     
     var body: some View {
         VStack(alignment: .leading) {
-            SongDetailNavBar(publisher: SpotifyPublisher.shared, song: song, isPlaying: $isPlaying, backAction: { presentationMode.wrappedValue.dismiss() })
+          SongDetailNavBar(show: $show, publisher: SpotifyPublisher.shared, song: song, isPlaying: $isPlaying, backAction: { presentationMode.wrappedValue.dismiss() })
                 .padding(.horizontal)
             
             ScrollView {
                 VStack(spacing: 12) {
                     ForEach(song.notes, id: \.id) { note in
                       NoteItemView(note: note) { time in
-                        publisher.playSong(uri: "")
-                        publisher.playerAPI?.seek(toPosition: time, callback: .none)
+                        publisher.playSong(uri: song.id)
+                        publisher.playerAPI?.seek(toPosition: time, callback: nil)
+                        print(time)
                       }
                     }
                 }
@@ -40,6 +41,7 @@ struct SongDetailView: View {
 
 struct SongDetailNavBar: View {
     
+  @Binding var show: Bool
     @ObservedObject var publisher: SpotifyPublisher
     
     var song: SongModel
@@ -66,23 +68,18 @@ struct SongDetailNavBar: View {
             
             Button(action: {
               if publisher.accessToken == ""  {
-                #warning("replace with uri")
-                publisher.connect(with: "")
+                publisher.connect(with: song.id)
+                return
               }
-                if publisher.isPaused {
-                    publisher.appRemote.playerAPI?.resume { (whatever, error) in
-                        print(error ?? "")
-                    }
-                } else {
-                    publisher.appRemote.playerAPI?.pause { (whatever, error) in
-                        print(error ?? "")
-                    }
-                }
+              if publisher.track?.uri != song.id {
+                publisher.playSong(uri: song.id)
+              }
+              show.toggle()
             }) {
-                if publisher.isPaused {
-                    Image(systemName: "play.fill")
+              if publisher.track?.uri == song.id {
+                  IsPlayingView()
                 } else {
-                    IsPlayingView()
+                  Image(systemName: "play.fill")
                 }
             }
             .frame(width: 45, height: 45)

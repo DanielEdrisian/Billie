@@ -27,7 +27,7 @@ struct NoteItemView: View {
             .bold()
             .padding(.horizontal)
           Spacer()
-          Text("\(note.timeInSong.intToTime)")
+          Text("\((note.timeInSong / 1000).intToTime)")
             .fontWeight(.light)
           
         }

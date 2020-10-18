@@ -18,7 +18,7 @@ struct ContentView: View {
             Color.sBackground//.edgesIgnoringSafeArea(.all)
             TabView {
                 ZStack(alignment: .bottom) {
-                    HomeView()
+                  HomeView(show: $show)
                     if publisher.track != nil {
                         NowPlayingSliverView(show: $show)
                     }

@@ -10,6 +10,7 @@ import SwiftUI
 struct HomeView: View {
   
   @ObservedObject var user = UserModel.shared
+  @Binding var show: Bool
   
   var body: some View {
     NavigationView {
@@ -20,7 +21,7 @@ struct HomeView: View {
             .bold()
           
           ForEach(user.songs, id: \.id) { song in
-            NavigationLink(destination: SongDetailView(publisher: SpotifyPublisher.shared, song: song)) {
+            NavigationLink(destination: SongDetailView(show: $show, publisher: SpotifyPublisher.shared, song: song)) {
               SongItemView(song: song)
             }
             .buttonStyle(PlainButtonStyle())
@@ -32,12 +33,6 @@ struct HomeView: View {
       }
       .navigationBarTitle("Home")
     }
-  }
-}
-
-struct HomeView_Previews: PreviewProvider {
-  static var previews: some View {
-    HomeView()
   }
 }
 
