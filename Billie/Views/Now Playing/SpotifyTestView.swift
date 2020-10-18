@@ -41,8 +41,13 @@ struct SpotifyTestView: View {
                 }
 
                 Spacer()
+<<<<<<< HEAD
 
                 HStack(spacing: 50) {
+=======
+                
+                HStack(spacing: 10) {
+>>>>>>> 968a26b8f13700e84b952a3d98ee4d640f15a8e0
                     Button(action: {
                         publisher.playerAPI?.skip(toPrevious: .none)
                     }) {
