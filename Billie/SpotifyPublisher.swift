@@ -28,7 +28,8 @@ class SpotifyPublisher: NSObject, ObservableObject, SPTAppRemoteDelegate, SPTApp
     @Published var isPaused: Bool = true
     @Published var profileImage: UIImage?
     @Published var searchResults = [SpotifyTrack]()
-    
+  @Published var albumImage: UIImage?
+  
     func search(forString: String) {
         if forString.isEmpty {
             searchResults = []
@@ -38,7 +39,7 @@ class SpotifyPublisher: NSObject, ObservableObject, SPTAppRemoteDelegate, SPTApp
             self.searchResults = items
         }
     }
-    
+  
     func playSong(uri: String) {
         if appRemote.isConnected {
             self.playerAPI?.play(uri, asRadio: false, callback: { (res, error) in
@@ -47,6 +48,12 @@ class SpotifyPublisher: NSObject, ObservableObject, SPTAppRemoteDelegate, SPTApp
                 }
             }
             )
+          guard let t = track else { return }
+          manager.getTrack(title: t.name, artist: t.artist.name) { (spotitrack) in
+            let data = try? Data(contentsOf: URL(string: spotitrack.album?.artUri ?? "")!)
+            self.albumImage = UIImage(data: data!)!
+          }
+
         } else {
             connect(with: uri)
         }
@@ -58,11 +65,11 @@ class SpotifyPublisher: NSObject, ObservableObject, SPTAppRemoteDelegate, SPTApp
         appRemote.connectionParameters.accessToken = self.accessToken
         appRemote.delegate = self
         manager.delegate = self
+      
     }
     
     func connect(with uri: String) {
         if appRemote.authorizeAndPlayURI(uri) {
-            
         } else {
             fatalError()
         }
@@ -91,6 +98,12 @@ class SpotifyPublisher: NSObject, ObservableObject, SPTAppRemoteDelegate, SPTApp
             track = state.track
             playbackPosition = state.playbackPosition
             isPaused = state.isPaused
+          
+          guard let t = track else { return }
+          manager.getTrack(title: t.name, artist: t.artist.name) { (spotitrack) in
+            let data = try? Data(contentsOf: URL(string: spotitrack.album?.artUri ?? "")!)
+            self.albumImage = UIImage(data: data!)!
+          }
         }
     }
     

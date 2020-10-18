@@ -25,7 +25,7 @@ struct SongDetailView: View {
                 VStack(spacing: 12) {
                     ForEach(song.notes, id: \.id) { note in
                       NoteItemView(note: note) { time in
-                        publisher.playSong(uri: "")
+                        publisher.playSong(uri: note.songId)
                         publisher.playerAPI?.seek(toPosition: time, callback: .none)
                       }
                     }
@@ -67,7 +67,7 @@ struct SongDetailNavBar: View {
             Button(action: {
               if publisher.accessToken == ""  {
                 #warning("replace with uri")
-                publisher.connect(with: "")
+                publisher.connect(with: song.id)
               }
                 if publisher.isPaused {
                     publisher.appRemote.playerAPI?.resume { (whatever, error) in
