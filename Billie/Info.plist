@@ -2,6 +2,8 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>NSAppleMusicUsageDescription</key>
+	<string>So we can bump some Billie songs.</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleExecutable</key>
@@ -58,21 +60,20 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
-  <key>LSApplicationQueriesSchemes</key>
-  <array>
-    <string>spotify</string>
-  </array>
-  
-  <key>CFBundleURLTypes</key>
-  <array>
-    <dict>
-      <key>CFBundleURLName</key>
-      <string>com.mnabokow.HackNC2020</string>
-      <key>CFBundleURLSchemes</key>
-      <array>
-        <string>hacknc2020</string>
-      </array>
-    </dict>
-  </array>
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>spotify</string>
+	</array>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleURLName</key>
+			<string>com.mnabokow.HackNC2020</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>hacknc2020</string>
+			</array>
+		</dict>
+	</array>
 </dict>
 </plist>

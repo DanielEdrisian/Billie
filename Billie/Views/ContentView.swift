@@ -6,10 +6,12 @@
 //
 
 import SwiftUI
+import MediaPlayer
 
 struct ContentView: View {
     
     @State var show = false
+    @ObservedObject var publisher = SpotifyPublisher.shared
     
     var body: some View {
         ZStack {
@@ -17,7 +19,7 @@ struct ContentView: View {
             TabView {
                 ZStack(alignment: .bottom) {
                     HomeView()
-                    if SpotifyPublisher.shared.track != nil {
+                    if publisher.track != nil {
                         NowPlayingSliverView(show: $show)
                     }
                 }
@@ -26,7 +28,7 @@ struct ContentView: View {
                     Text("Home")
                 }
                 
-                SearchView(publisher: SpotifyPublisher.shared)
+                SearchView(publisher: publisher)
                     .tabItem {
                         Image(systemName: "magnifyingglass")
                         Text("Search")
@@ -39,7 +41,7 @@ struct ContentView: View {
                     }
             }
             
-            SpotifyTestView(publisher: SpotifyPublisher.shared)
+            SpotifyTestView(publisher: publisher)
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
                 .background(BlurView(style: .systemThickMaterial))
                 .tRoundCorners(40, corners: [.topLeft, .topRight])
@@ -52,9 +54,6 @@ struct ContentView: View {
                     }
                 }
                 .padding(.top, 40)
-        }
-        .onAppear {
-            SpotifyPublisher.shared.connect()
         }
         .accentColor(.sRed)
     }
