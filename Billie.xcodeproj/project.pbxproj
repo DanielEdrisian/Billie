@@ -215,12 +215,12 @@
 		3A0D2B46253C3DFC000A8AF5 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				3A0D2B52253C3E71000A8AF5 /* Now Playing */,
 				3A0D2B47253C3DFC000A8AF5 /* ContentView.swift */,
 				3A0D2B17253C3DB2000A8AF5 /* HomeView.swift */,
 				3A0D2B0A253C3DB0000A8AF5 /* SongDetailView.swift */,
 				3A0D2B12253C3DB1000A8AF5 /* IsPlayingView.swift */,
 				3A0D2B1C253C3DB2000A8AF5 /* SearchView.swift */,
+				3A0D2B52253C3E71000A8AF5 /* Now Playing */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -239,8 +239,8 @@
 		3A0D2B52253C3E71000A8AF5 /* Now Playing */ = {
 			isa = PBXGroup;
 			children = (
-				3A0D2B1D253C3DB3000A8AF5 /* ProgressView.swift */,
 				3A0D2B13253C3DB1000A8AF5 /* SpotifyTestView.swift */,
+				3A0D2B1D253C3DB3000A8AF5 /* ProgressView.swift */,
 				3A0D2B15253C3DB1000A8AF5 /* CustomSlider.swift */,
 			);
 			path = "Now Playing";
@@ -376,6 +376,7 @@
 			mainGroup = 3A0D2AA6253C3893000A8AF5;
 			packageReferences = (
 				3A0D2B02253C3AB7000A8AF5 /* XCRemoteSwiftPackageReference "swiftui-sliders" */,
+				BDA8A4F9253C4A700093A487 /* XCRemoteSwiftPackageReference "MarqueeText" */,
 			);
 			productRefGroup = 3A0D2AB0253C3893000A8AF5 /* Products */;
 			projectDirPath = "";
@@ -715,7 +716,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Billie/Preview Content\"";
-				DEVELOPMENT_TEAM = W2PUF8XW54;
+				DEVELOPMENT_TEAM = Q9PPH2T3L2;
 				ENABLE_PREVIEWS = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -744,7 +745,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Billie/Preview Content\"";
-				DEVELOPMENT_TEAM = W2PUF8XW54;
+				DEVELOPMENT_TEAM = Q9PPH2T3L2;
 				ENABLE_PREVIEWS = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -899,6 +900,14 @@
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 1.0.0;
+			};
+		};
+		BDA8A4F9253C4A700093A487 /* XCRemoteSwiftPackageReference "MarqueeText" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/joekndy/MarqueeText.git";
+			requirement = {
+				branch = master;
+				kind = branch;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */

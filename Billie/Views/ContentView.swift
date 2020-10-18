@@ -44,25 +44,31 @@ struct ContentView: View {
                     Text("Home")
                 }
                 
+                SearchView(publisher: SpotifyPublisher.shared)
+                    .tabItem {
+                        Image(systemName: "magnifyingglass")
+                        Text("Search")
+                    }
+                
                 Text("Settings")
                     .tabItem {
                         Image(systemName: "gear")
                         Text("Settings")
                     }
-                
-                SpotifyTestView(publisher: SpotifyPublisher.shared)
-                    .frame(maxWidth: .infinity, maxHeight: .infinity)
-                    .tRoundCorners(60, corners: [.topLeft, .topRight])
-                    .offset(y: show ? 0 : UIScreen.main.bounds.height)
-                    .edgesIgnoringSafeArea(.bottom)
-                    .transition(.slide)
-                    .onTapGesture(count: 2) {
-                        withAnimation(.easeInOut) {
-                            show.toggle()
-                        }
-                    }
-                    .padding(.top, 40)
             }
+            
+            SpotifyTestView(publisher: SpotifyPublisher.shared)
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
+                .tRoundCorners(60, corners: [.topLeft, .topRight])
+                .offset(y: show ? 0 : UIScreen.main.bounds.height)
+                .edgesIgnoringSafeArea(.bottom)
+                .transition(.slide)
+                .onTapGesture(count: 2) {
+                    withAnimation(.easeInOut) {
+                        show.toggle()
+                    }
+                }
+                .padding(.top, 40)
         }
         .accentColor(.sRed)
     }
